@@ -1,0 +1,45 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<div style="text-align: center">
+    <h1>{{message}}</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form>
+                <fieldset>
+                    <legend class="text-center">Valid information is required to register. <span class="req"><small>
+                                required *</small></span></legend>
+
+                    <div class="form-group">
+                        <label for="hotelid"><span class="req">* </span> Enter your  Hotel Id    </label>
+                        <input required type="text" [(ngModel)]="user.hotelid" name="hotelid" id="txt"
+                            class="form-control phone" maxlength="28" placeholder="Enter your hotelid." />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="name"><span class="req">* </span>Enter your  Name </label>
+                        <input class="form-control" type="text" [(ngModel)]="user.name" name="name" id="txt" required
+                            placeholder="Enter valid name" />
+                        <div id="errFirst"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phoneno"><span class="req">* </span> Enter your Phone Number </label>
+                        <input class="form-control" type="number" [(ngModel)]="user.phoneno" name="phoneno" id="num"
+                            placeholder="Enter phoneno" required />
+                        <div id="errLast"></div>
+                    </div>
+                    <div class="form-group">
+                        <input class="btn btn-success" type="submit" name="submit_reg" value="Register" (click)="registerNow()">
+                    </div>
+                </fieldset>
+            </form><!-- ends register form -->
+            <!-- second for to fiter user-->
+        </div><!-- ends col-6 -->
+
+    </div>
+</div>
